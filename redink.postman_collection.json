@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "605a35e8-a90b-48f8-8405-3cc8537f617b",
+		"name": "redink",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addAuthor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"gurkirtan\",\n    \"email\": \"ss2041272@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}addAuthor",
+					"host": [
+						"{{baseUrl}}addAuthor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBlog",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"authorId\": \"61ab6e3d564b2deab14821c2\",\n    \"title\": \"this is title\",\n    \"discription\": \"this is title\",\n    \"blog\": \"this is title\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}addPost",
+					"host": [
+						"{{baseUrl}}addPost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPostById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}getPost/61ab56c1d5fb29a27098bfd5",
+					"host": [
+						"{{baseUrl}}getPost"
+					],
+					"path": [
+						"61ab56c1d5fb29a27098bfd5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePost",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"this is titl2\",\n    \"discription\": \"this is title\",\n    \"blog\": \"this is title\",\n    \"authorId\": \"61ab53c1149cc461bbc1c583\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}updatePost/61ab56c1d5fb29a27098bfd5",
+					"host": [
+						"{{baseUrl}}updatePost"
+					],
+					"path": [
+						"61ab56c1d5fb29a27098bfd5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePOstById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"61ab58b87e0dc8a2853ad10a\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}deletePostById",
+					"host": [
+						"{{baseUrl}}deletePostById"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPostsByAuthorId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"authorId\": \"61ab5667d5fb29a27098bfd2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}getPostsByAuthorId",
+					"host": [
+						"{{baseUrl}}getPostsByAuthorId"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "localhost:8080/"
+		}
+	]
+}
